@@ -1,0 +1,1 @@
+docker run --name osticket -d --network=ocschatsbd_localocs -e MYSQL_HOST=ocsinventory-db -e MYSQL_DATABASE=osticket -e MYSQL_USER=root -e MYSQL_PASSWORD=rootpass -p 8080:80 interlegis/osticket
