@@ -1,0 +1,1 @@
+docker run -dti --name nextcloud --net net_conr --ip 172.27.0.30 -p 80:80 -e POSTGRES_DB=nextcloud -e POSTGRES_USER=root -e POSTGRES_PASSWORD=Super3ies1234. -e NEXTCLOUD_ADMIN_USER=admin -e NEXTCLOUD_ADMIN_PASSWORD=Super3ies1234. -e DATABASE_HOST=192.168.0.254 -e DATABASE_PORT=5432 nextcloud:latest
