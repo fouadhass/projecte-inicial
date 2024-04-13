@@ -1,0 +1,10 @@
+Add-DhcpServerv4Scope -Name "Red192-0" -StartRange 192.168.10.100 -EndRange 192.168.10.200 -SubnetMask 255.255.255.0 -LeaseDuration 8:00:00:00
+Add-DhcpServerv4Scope -Name "Red192-1" -StartRange 192.168.11.100 -EndRange 192.168.11.200 -SubnetMask 255.255.255.0 -LeaseDuration 8:00:00:00
+Add-DhcpServerv4Scope -Name "Red192-2" -StartRange 192.168.12.100 -EndRange 192.168.12.200 -SubnetMask 255.255.255.0 -LeaseDuration 8:00:00:00
+Add-DhcpServerv4Scope -Name "Red192-3" -StartRange 192.168.13.100 -EndRange 192.168.13.200 -SubnetMask 255.255.255.0 -LeaseDuration 8:00:00:00
+Add-DhcpServerv4Scope -Name "Red192-4" -StartRange 192.168.14.100 -EndRange 192.168.14.200 -SubnetMask 255.255.255.0 -LeaseDuration 8:00:00:00
+
+
+#RESERVA + EXLUSIÓ
+Add-DhcpServerv4ExclusionRange -ScopeId 192.168.10.0 -StartRange 192.168.10.210 -EndRange 192.168.10.215
+Add-DhcpServerv4Reservation -ScopeId "192.168.10.0" -IPAddress "192.168.10.50" -ClientId "00-1A-2B-3C-4D-5E" -Description "Reserva DHCP para NombreDelDispositivo" -Name "NombreDelDispositivo"
