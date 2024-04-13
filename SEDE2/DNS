@@ -1,0 +1,9 @@
+Add-DnsServerPrimaryZone -Name chatsbd.es -ZoneFile "db.chatsbd.es"
+Add-DnsServerResourceRecordA  -ZoneName chatsbd.es -IPv4Address 192.168.10.1 -Name "@"
+Add-DnsServerResourceRecordA  -ZoneName chatsbd.es -IPv4Address 192.168.10.5 -Name "subdominio"
+
+
+
+Add-DnsServerPrimaryZone -Name 10.168.192.in-addr.arpa -ZoneFile "db.192-inversa"
+Add-DnsServerResourceRecordPtr -PtrDomainName "chatsbd.es" -Name "1" -ZoneName "10.168.192.in-addr.arpa"
+Add-DnsServerResourceRecordPtr -PtrDomainName "subdominio" -Name "5" -ZoneName "10.168.192.in-addr.arpa"
